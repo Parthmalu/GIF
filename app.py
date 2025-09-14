@@ -4,30 +4,22 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    gif_url = "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExank3aGtxaGVpM2RwYXp3N29icG5kd3R4bnE5bnI1bmlwcHM3M3NpcyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/ZBQhoZC0nqknSviPqT/giphy.gif"  # Replace this URL with your desired GIF URL
+    gif_url = "https://media.giphy.com/media/3o6Zt6ML6BklcajjsA/giphy.gif"  # Replace with your GIF URL
     return render_template_string(f'''
     <!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Sorry Message with GIF</title>
+        <title>GIF Display</title>
         <style>
           body {{
             background-color: #f0e6f7;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #4b2c83;
-            text-align: center;
-          }}
-          h1 {{
-            font-size: 3rem;
-            margin-bottom: 20px;
           }}
           img {{
             width: 320px;
@@ -37,12 +29,10 @@ def home():
         </style>
     </head>
     <body>
-        <h1>I'm sorry 😔🙏</h1>
-        <img src="{gif_url}" alt="Sorry GIF" />
+        <img src="{gif_url}" alt="GIF" />
     </body>
     </html>
     ''')
 
 if __name__ == '__main__':
     app.run()
-
