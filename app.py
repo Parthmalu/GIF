@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    gif_url = "https://media.giphy.com/media/3o6Zt6ML6BklcajjsA/giphy.gif"  # Replace with your GIF URL
+    gif_url = "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGFqc2MwaGw1aTB2cDdjbWxjMGVtZjllMDUwNjVobHRzNGQ4NnFzeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZBQhoZC0nqknSviPqT/giphy.gif"  # Replace with your GIF URL
     return render_template_string(f'''
     <!DOCTYPE html>
     <html lang="en">
